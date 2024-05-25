@@ -4,22 +4,28 @@
 <div class="logout-container">
     <a href="/logout" class="logout-button">Logout</a>
 </div>
-<h1>Writing</h1>
-<p>{{ articles|length }} Articles</p>
+<h1>Yazılar</h1>
+<p>{{ articles|length }} Konu</p>
 <table class="articles-table">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Read Time</th>
+            <th>Konu</th>
+            <th>Haber</th>
+            <th>Okunma Durumu</th>
         </tr>
     </thead>
     <tbody>
         {% for article in articles %}
         <tr>
-            <td>{{ article.title }}</td>
-            <td>{{ article.description }}</td>
-            <td>{{ article.read_time }}</td>
+            <td>{{ article.Konu }}</td>
+            <td><a href="{{ article.Link }}" target="_blank">{{ article.Haber }}</a></td>
+            <td>
+                {% if article.okundu %}
+                    Okundu
+                {% else %}
+                    <a href="{{ article.Link }}" target="_blank">Okunmadı</a>
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </tbody>

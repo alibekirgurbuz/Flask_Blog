@@ -42,7 +42,7 @@ h1 {
     color: #333;
 }
 
-/* Login and Register Pages */
+/* Login ve Register Sayfaları */
 form {
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Blog Page */
+/* Blog Sayfası */
 .articles-table {
     width: 100%;
     border-collapse: collapse;

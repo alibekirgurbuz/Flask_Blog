@@ -5,14 +5,14 @@ app = Flask(__name__)
 # Kullanıcı bilgilerini tutacak listeler
 users = []
 articles = [
-    {"title": "How to Craft a Developer Resume", "description": "Tips and ideas for creating a great tech resume.", "read_time": "1 min read"},
-    {"title": "Vue.js Global 2020: A Recap", "description": "Thoughts and experiences from attending Vue.js Global.", "read_time": "10 min read"},
-    {"title": "Build a Blog using Nuxt.js Content Module", "description": "What you need to know about the Nuxt Content Module.", "read_time": "1 min read"},
-    {"title": "My 3 Favorite VS Code Extensions", "description": "Shared my top 3 favorite VS Code Extensions.", "read_time": "1 min read"},
-    {"title": "How to Switch Logo in Dark Mode", "description": "How I switch the color of my logo in dark mode.", "read_time": "1 min read"},
-    {"title": "Deploy a Gridsome App on Azure Static Web Apps", "description": "How to deploy a static website using Azure Static Web Apps.", "read_time": "8 min read"},
-    {"title": "5 Soft Skills Every Software Developer Should Learn", "description": "Some core technical things that are not so obvious.", "read_time": "1 min read"},
-    {"title": "Let's Learn Data Visualization with D3.js", "description": "A challenge to learn a new technology using D3.js.", "read_time": "10 min read"}
+    {"Konu": "Ekonomi", "Haber": "Pazarlama dünyası İstanbul'da bir araya geldi.", "Okunma": "1 min read", "Link": "https://www.ntv.com.tr/galeri/ekonomi/pazarlama-dunyasi-istanbulda-bir-araya-geldi,9MNz9V4PrUmRGuOq1X-cvQ"},
+    {"Konu": "Tarih", "Haber": "Bursa mutfağı, tarihi İpek Han Meydanı'nda vitrine çıktı", "Okunma": "10 min read", "Link": "https://www.hurriyet.com.tr/yerel-haberler/bursa/osmangazi/bursa-mutfagi-tarihi-ipek-han-meydaninda-vitr-42467625"},
+    {"Konu": "Spor", "Haber": "Süper Lig'de 3. küme düşen takım belli oldu!", "Okunma": "1 min read", "Link": "https://www.haber1.com/guncel/sivrisinekler-oyunu-11-frankfurt-turk-tiyatro-festivalinde-sahnelendi/"},
+    {"Konu": "Tiyatro", "Haber": "“Sivrisinekler” oyunu 11. Frankfurt Türk Tiyatro Festivali'nde sahnelendi", "Okunma": "1 min read", "Link": "https://www.haber1.com/guncel/sivrisinekler-oyunu-11-frankfurt-turk-tiyatro-festivalinde-sahnelendi/"},
+    {"Konu": "Bilim", "Haber": "Bilim insanları açıkladı: Milyonları öldüren 'Kara Ölüm' nasıl yayıldı?", "Okunma": "1 min read", "Link": "https://www.ntv.com.tr/dunya/bilim-insanlari-acikladi-milyonlari-olduren-kara-olum-nasil-yayildi,ayJYAAvd4Eu4ZG_O1LiFug"},
+    {"Konu": "Sinema", "Haber": "Sinemaseverlere müjde| Bu hafta 8 yeni film vizyona girecek.", "Okunma": "8 min read", "Link": "https://www.sonmuhur.com/sinemaseverlere-mujde-bu-hafta-8-yeni-film-vizyona-girecek"},
+    {"Konu": "Astronomi", "Haber": "Astronomi tarihinde ilk: Kara deliğin manyetik alanları görüntülendi!", "Okunma": "1 min read", "Link": "https://www.ntv.com.tr/teknoloji/astronomi-tarihinde-ilk-kara-deligin-manyetik-alanlari-goruntulendi,EnxMSr6MNESRWwROOkNPwQ"},
+    {"Konu": "Siyaset", "Haber": "Cumhurbaşkanı Erdoğan'dan Afrika Günü paylaşımı", "Okunma": "10 min read", "Link": "https://www.bursa.com/haber/cumhurbaskani-erdogan-dan-afrika-gunu-paylasimi-934366.html"}
 ]
 
 current_user = None
