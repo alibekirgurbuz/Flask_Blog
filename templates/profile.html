@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ user.username }}'s Profile</h2>
+<p>{{ user.profile }}</p>
+{% if user.username == current_user.username %}
+    <a href="{{ url_for('edit_profile') }}">Edit Profile</a>
+{% endif %}
+{% endblock %}
