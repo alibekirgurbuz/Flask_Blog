@@ -41,6 +41,11 @@ def login():
             current_user = user
             return redirect(url_for('blog'))
     return 'Giriş başarısız!'
+@app.route('/logout')
+def logout():
+    global current_user
+    current_user = None
+    return redirect(url_for('home'))
 
 @app.route('/blog')
 def blog():

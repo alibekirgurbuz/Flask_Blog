@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="logout-container">
+    <a href="/logout" class="logout-button">Logout</a>
+</div>
 <h1>Writing</h1>
 <p>{{ articles|length }} Articles</p>
 <table class="articles-table">
@@ -22,5 +25,6 @@
     </tbody>
 </table>
 {% endblock %}
+
 
 
