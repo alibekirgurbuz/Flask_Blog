@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2 class="form-title">Login</h2>
+<h2 class="form-title" style="text-align: center;">Giriş Yap</h2>
 <form method="POST" action="/login">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
     
-    <label for="password">Password:</label>
+    <label for="password">Şifre:</label>
     <input type="password" id="password" name="password" required>
     
-    <button type="submit">Login</button>
+    <button type="submit">Giriş</button>
 </form>
-<a href="/register">Register</a>
+<a href="/register">Üye Ol</a>
 {% endblock %}
 

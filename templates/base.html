@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Flask Web App</title>
+    <title>Blog Haber</title>
 </head>
 <body>
     <header>
@@ -13,10 +13,10 @@
                 <li><a href="/blog">Blog</a></li>
                 {% if current_user %}
                 <li><a href="/profile/{{ current_user['username'] }}">Profile</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="/logout">Çıkış Yap</a></li>
                 {% else %}
-                <li><a href="/">Login</a></li>
-                <li><a href="/register">Register</a></li>
+                <li><a href="/">Giriş Yap</a></li>
+                <li><a href="/register">Üye Ol<Ol></Ol></a></li>
                 {% endif %}
             </ul>
         </nav>

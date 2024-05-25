@@ -68,7 +68,7 @@ input {
 
 button {
     padding: 10px;
-    background: #5cb85c;
+    background: #1259c3;
     color: white;
     border: none;
     border-radius: 4px;
@@ -76,14 +76,14 @@ button {
 }
 
 button:hover {
-    background: #4cae4c;
+    background: #534cae;
 }
 
 a {
     text-align: center;
     display: block;
     margin-top: 20px;
-    color: #5cb85c;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -100,8 +100,8 @@ a:hover {
 
 .articles-table th, .articles-table td {
     padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: left;
+    border: 1px solid #d1d1d1;
+    text-align: center;
 }
 
 .articles-table th {
@@ -117,7 +117,7 @@ a:hover {
 }
 
 .articles-table td {
-    color: #333;
+    color: #7da20d;
 }
 
 .logout-container {

@@ -2,17 +2,17 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-# Kullanıcı bilgilerini tutacak listeler
+# Kullanıcı bilgilerini tutacak liste
 users = []
 articles = [
-    {"Konu": "Ekonomi", "Haber": "Pazarlama dünyası İstanbul'da bir araya geldi.", "Okunma": "1 min read", "Link": "https://www.ntv.com.tr/galeri/ekonomi/pazarlama-dunyasi-istanbulda-bir-araya-geldi,9MNz9V4PrUmRGuOq1X-cvQ"},
-    {"Konu": "Tarih", "Haber": "Bursa mutfağı, tarihi İpek Han Meydanı'nda vitrine çıktı", "Okunma": "10 min read", "Link": "https://www.hurriyet.com.tr/yerel-haberler/bursa/osmangazi/bursa-mutfagi-tarihi-ipek-han-meydaninda-vitr-42467625"},
-    {"Konu": "Spor", "Haber": "Süper Lig'de 3. küme düşen takım belli oldu!", "Okunma": "1 min read", "Link": "https://www.haber1.com/guncel/sivrisinekler-oyunu-11-frankfurt-turk-tiyatro-festivalinde-sahnelendi/"},
-    {"Konu": "Tiyatro", "Haber": "“Sivrisinekler” oyunu 11. Frankfurt Türk Tiyatro Festivali'nde sahnelendi", "Okunma": "1 min read", "Link": "https://www.haber1.com/guncel/sivrisinekler-oyunu-11-frankfurt-turk-tiyatro-festivalinde-sahnelendi/"},
-    {"Konu": "Bilim", "Haber": "Bilim insanları açıkladı: Milyonları öldüren 'Kara Ölüm' nasıl yayıldı?", "Okunma": "1 min read", "Link": "https://www.ntv.com.tr/dunya/bilim-insanlari-acikladi-milyonlari-olduren-kara-olum-nasil-yayildi,ayJYAAvd4Eu4ZG_O1LiFug"},
+    {"Konu": "Ekonomi", "Haber": "Pazarlama dünyası İstanbul'da bir araya geldi.", "Link": "https://www.ntv.com.tr/galeri/ekonomi/pazarlama-dunyasi-istanbulda-bir-araya-geldi,9MNz9V4PrUmRGuOq1X-cvQ"},
+    {"Konu": "Tarih", "Haber": "Bursa mutfağı, tarihi İpek Han Meydanı'nda vitrine çıktı", "Link": "https://www.hurriyet.com.tr/yerel-haberler/bursa/osmangazi/bursa-mutfagi-tarihi-ipek-han-meydaninda-vitr-42467625"},
+    {"Konu": "Spor", "Haber": "Süper Lig'de 3. küme düşen takım belli oldu!", "Link": "https://www.haber1.com/guncel/sivrisinekler-oyunu-11-frankfurt-turk-tiyatro-festivalinde-sahnelendi/"},
+    {"Konu": "Tiyatro", "Haber": "“Sivrisinekler” oyunu 11. Frankfurt Türk Tiyatro Festivali'nde sahnelendi", "Link": "https://www.haber1.com/guncel/sivrisinekler-oyunu-11-frankfurt-turk-tiyatro-festivalinde-sahnelendi/"},
+    {"Konu": "Bilim", "Haber": "Bilim insanları açıkladı: Milyonları öldüren 'Kara Ölüm' nasıl yayıldı?", "Link": "https://www.ntv.com.tr/dunya/bilim-insanlari-acikladi-milyonlari-olduren-kara-olum-nasil-yayildi,ayJYAAvd4Eu4ZG_O1LiFug"},
     {"Konu": "Sinema", "Haber": "Sinemaseverlere müjde| Bu hafta 8 yeni film vizyona girecek.", "Okunma": "8 min read", "Link": "https://www.sonmuhur.com/sinemaseverlere-mujde-bu-hafta-8-yeni-film-vizyona-girecek"},
-    {"Konu": "Astronomi", "Haber": "Astronomi tarihinde ilk: Kara deliğin manyetik alanları görüntülendi!", "Okunma": "1 min read", "Link": "https://www.ntv.com.tr/teknoloji/astronomi-tarihinde-ilk-kara-deligin-manyetik-alanlari-goruntulendi,EnxMSr6MNESRWwROOkNPwQ"},
-    {"Konu": "Siyaset", "Haber": "Cumhurbaşkanı Erdoğan'dan Afrika Günü paylaşımı", "Okunma": "10 min read", "Link": "https://www.bursa.com/haber/cumhurbaskani-erdogan-dan-afrika-gunu-paylasimi-934366.html"}
+    {"Konu": "Astronomi", "Haber": "Astronomi tarihinde ilk: Kara deliğin manyetik alanları görüntülendi!", "Link": "https://www.ntv.com.tr/teknoloji/astronomi-tarihinde-ilk-kara-deligin-manyetik-alanlari-goruntulendi,EnxMSr6MNESRWwROOkNPwQ"},
+    {"Konu": "Siyaset", "Haber": "Cumhurbaşkanı Erdoğan'dan Afrika Günü paylaşımı", "Link": "https://www.bursa.com/haber/cumhurbaskani-erdogan-dan-afrika-gunu-paylasimi-934366.html"}
 ]
 
 current_user = None
